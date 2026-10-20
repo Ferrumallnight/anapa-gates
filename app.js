@@ -43,7 +43,7 @@ function draw() {
   scene.style.setProperty('--inverse', 1 / scale);
   $('zoom-in').disabled = scale >= 4; $('zoom-out').disabled = scale <= 1;
 }
-function reset() { width = Math.min(viewport.clientWidth, viewport.clientHeight * 1400 / 784); height = width * 784 / 1400; scene.style.width = `${width}px`; scale = 1; tx = 0; ty = (viewport.clientHeight - height) / 2; draw(); }
+function reset() { width = Math.min(viewport.clientWidth, viewport.clientHeight * 1200 / 660); height = width * 660 / 1200; scene.style.width = `${width}px`; scale = 1; tx = 0; ty = (viewport.clientHeight - height) / 2; draw(); }
 function zoom(next, x = viewport.clientWidth / 2, y = viewport.clientHeight / 2) {
   next = Math.max(1, Math.min(4, next)); const ratio = next / scale;
   tx = x - (x - tx) * ratio; ty = y - (y - ty) * ratio; scale = next; draw();
