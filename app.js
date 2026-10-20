@@ -19,7 +19,8 @@ function select(id) {
   $('call-action').replaceChildren(action);
   $('call-note').textContent = callable ? `${gate.phone} · iPhone запросит подтверждение` : 'Звонок станет доступен после добавления номера';
   $('photo-area').innerHTML = placeholder;
-  if (gate.photo) { const img = new Image(); img.alt = `Калитка ${gate.number}`; img.onload = () => { if (selected === id) $('photo-area').replaceChildren(img); }; img.src = gate.photo; }
+  $('photo-area').classList.remove('has-photo');
+  if (gate.photo) { const img = new Image(); img.alt = `Калитка ${gate.number}`; img.onload = () => { if (selected === id) { $('photo-area').replaceChildren(img); $('photo-area').classList.add('has-photo'); } }; img.src = gate.photo; }
 }
 for (const gate of gates) {
   const marker = document.createElement('button');
