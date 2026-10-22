@@ -1,7 +1,7 @@
-const VERSION = 'v16-final-icon';
+const VERSION = 'v18-help-dialog';
 const PREFIX = 'anapa-gates-';
 const CACHE = PREFIX + VERSION;
-const FILES = ['./theme-v16.js', './', './index.html', './styles-v16.css', './app-v16.js', './gates-v16.js', './manifest-v16.webmanifest', './assets/masterplan-perspective.jpg', './assets/icon-v16-192.png', './assets/icon-v16-512.png', './assets/icon-v16-180.png', ...[1,2,3,4,5,6].map(n => `./assets/gate-${n}.webp`)];
+const FILES = ['./assets/masterplan-night-v17.jpg', './theme-v18.js', './', './index.html', './styles-v18.css', './app-v18.js', './gates-v18.js', './manifest-v18.webmanifest', './assets/masterplan-perspective.jpg', './assets/icon-v16-192.png', './assets/icon-v16-512.png', './assets/icon-v16-180.png', ...[1,2,3,4,5,6].map(n => `./assets/gate-${n}.webp`)];
 self.addEventListener('install', event => {
   // Bypass HTTP caches; an incomplete upload must never activate a partial release.
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES.map(path => new Request(new URL(path,self.registration.scope), {cache:'reload'})))));
