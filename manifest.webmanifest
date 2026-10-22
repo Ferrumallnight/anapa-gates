@@ -7,8 +7,8 @@
   "start_url": "/anapa-gates/",
   "scope": "/anapa-gates/",
   "display": "standalone",
-  "background_color": "#f5f4f2",
-  "theme_color": "#f5f4f2",
+  "background_color": "#F6F6F6",
+  "theme_color": "#F6F6F6",
   "icons": [
     {
       "src": "./assets/icon-192.png",
